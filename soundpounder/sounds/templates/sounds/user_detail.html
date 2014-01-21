@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-lg-6 col-sm-12">
+    <div class="jumbotron">
+
+<h2>{{ object.username }}'s Profile</h2>
+{% if object.userprofile.bio %}
+<div>
+<b>Bio:</b>
+{{ object.userprofile.bio }}
+</div>
+{% endif %}
+
+{% if object.username == user.username %}
+  <p>
+    <a href='{% url "edit_profile" %}'>Edit my profile</a>
+  </p>
+{% endif %}
+
+</div></div></div>
+{% endblock %}

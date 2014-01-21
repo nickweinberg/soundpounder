@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+
+{% block content %}
+  <div class="row">
+    <div class="col-lg-6 col-sm-12">
+    <div class="jumbotron">
+
+
+<h3>Browse Sounds</h3>
+<ul class="list-unstyled">
+{% for sound in object_list %}
+  <li><a href="{{ MEDIA_URL }}{{ sound.audio_file }}">{{ sound }}</a>
+  	<ul>
+  	  {% for tag in sound.tags.all %}
+  	    <li>{{ tag }}</li>
+  	  {% endfor %}
+  	</ul>
+  </li>
+{% empty %}
+  <li>No sounds yet.</li>
+{% endfor %}
+</ul>
+
+</div>
+</div>
+</div>
+
+{% endblock content %}

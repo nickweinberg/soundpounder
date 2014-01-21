@@ -1,0 +1,39 @@
+
+@font-face {
+	  font-family: MyBlackout;
+      src: local("Blackout Two AM")
+}
+
+body {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background: none;
+
+}
+
+
+.content {
+	background-color: #291919;
+	padding: 20px;
+	font-family: Blackout;
+	font-size: 1.5em;
+}
+
+.nav, .navbar {
+	background-color: #291919;
+}
+
+
+
+.content h1 {
+	font-family: Darkworld;
+	color: #fff000;
+}
+.full {
+  /* background: url() no-repeat center center fixed; */
+  background-color: #3a4047;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
